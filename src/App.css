@@ -1,41 +1,113 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
-  padding: 20px;
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.chat-box {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 10px;
-  height: 400px;
-  overflow-y: auto;
-  margin-bottom: 10px;
-}
-
-.input-row {
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #f7f8fc, #e6ecf0);
+  height: 100vh;
   display: flex;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
 }
 
-input {
-  width: 300px;
-  padding: 8px;
+.app-container {
+  width: 80%;
+  max-width: 900px;
+  height: 90vh;
+  background-color: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-button {
-  padding: 8px 12px;
+.header {
+  padding: 20px;
+  background-color: #4f46e5;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-.user {
-  text-align: right;
-  margin: 5px;
-  color: #333;
+.chat-window {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #f4f6fa;
 }
 
-.bot {
-  text-align: left;
-  margin: 5px;
-  color: #007acc;
+.message {
+  margin-bottom: 15px;
+  padding: 12px 16px;
+  max-width: 70%;
+  border-radius: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.user-message {
+  background-color: #4f46e5;
+  color: white;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.bot-message {
+  background-color: #e0e7ff;
+  color: #1e1e2f;
+  align-self: flex-start;
+  margin-right: auto;
+}
+
+.input-area {
+  display: flex;
+  padding: 16px;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-right: 12px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.input-area input:focus {
+  border-color: #4f46e5;
+}
+
+.input-area button {
+  padding: 12px 20px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input-area button:hover {
+  background-color: #3730a3;
+}
+
+/* Scrollbar Styling */
+.chat-window::-webkit-scrollbar {
+  width: 8px;
+}
+.chat-window::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.2);
+  border-radius: 4px;
 }
